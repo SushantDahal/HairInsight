@@ -3,7 +3,7 @@ import { FaFileExport,FaCodepen,FaJediOrder } from "react-icons/fa";
 
 const Features = () =>{
     return(
-        <div className="w-full py-6 ">
+        <div className="w-full py-6 mb-4">
             <div className="max-w-[1280px] mx-auto bg-white py-4">
                 <Title title="Features "/>
                 <div className="grid md:grid-cols-3 gap-4 px-10 max-w-[1100px] mx-auto py-2 ">
