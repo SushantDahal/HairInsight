@@ -7,3 +7,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+.navbar li:hover{
+  cursor: pointer;
+  background-color: aqua;
+}
