@@ -9,7 +9,7 @@ function App() {  return (
     <>
     {/* <div className='bg-green-200'> */}
       <div>
-         <Navbar/>/
+         <Navbar/>
          <Hero />
          <Review/>
          <Features/>
