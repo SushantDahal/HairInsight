@@ -35,7 +35,7 @@ const Navbar = () => {
           <div className="grid lg:hidden " onClick={HandleNav}>
             <Hamburger />
             <div
-              className={`fixed top-0 left-0 w-[40%] h-[100%] z-50  bg-gradient-to-b from-[#000000] via-[#85f6ce] to-black     text-white  transition-transform ${
+              className={`fixed top-0 left-0 w-[40%] h-[100%] z-50  bg-gradient-to-b from-[#000000] via-[#ffffff] to-[#5bea73]     text-white  transition-transform ${
                 nav
                   ? "transform duration-700 -translate-x-full bg-green-950 "
                   : "transform duration-500 -translate-y-0 "
