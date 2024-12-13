@@ -2,12 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.navbar li:hover{
+.navbar li:hover {
   cursor: pointer;
   background-color: aqua;
+}
+
+/* Testimonial Prev and Next button */
+.p-carousel-prev {
+  background-color: #009963; /* Customize background color */
+  color: white; /* Customize text/icon color */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.p-carousel-next {
+  background-color: #009963; /* Customize background color */
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* Position the dots below the carousel */
+.p-carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Add spacing below the cards */
+  gap: 10px; /* Add spacing between dots */
+}
+
+/* Style for each dot */
+.p-carousel-indicator {
+  width: 12px; /* Size of dots */
+  height: 12px;
+  background-color: #e0e0e0; /* Inactive dot color */
+  border-radius: 50%; /* Make dots circular */
+  cursor: pointer; /* Pointer cursor for better UX */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Active dot style */
+.p-carousel-indicator.p-highlight {
+  background-color: #34c759; /* Active dot color */
+}
+
+/* Dot hover effect */
+.p-carousel-indicator:hover {
+  background-color: #28a745; /* Darker green on hover */
 }
