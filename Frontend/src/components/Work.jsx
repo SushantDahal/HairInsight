@@ -28,7 +28,7 @@ const Work = () => {
       <Title title="How It work" />
 
       <div className=" max-w-[1280px] mx-auto grid md:grid-cols-2 gap-4 mx:px-0 px-8">
-        <div className="bg-[#009963]">
+        <div className="bg-[#234A6B]">
           <img src={WorkImg} alt="" className="mx-auto px-2 p-2" />
         </div>
         <div className="flex flex-col justify-center gap-4">

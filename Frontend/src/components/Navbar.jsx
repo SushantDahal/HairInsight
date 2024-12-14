@@ -2,6 +2,7 @@ import { useState } from "react";
 import Logo from "../assets/Logo.png";
 import Button from "./Button";
 import { Divide as Hamburger } from "hamburger-react";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState("false");
@@ -10,9 +11,13 @@ const Navbar = () => {
     console.log("sushan");
     setNav(!nav);
   }
+  const [activeItem, setActiveItem] = useState("Home"); // Default active item
 
   return (
-    <div className="bg-black max-w-full mx-auto text-white">
+    <div
+      className="bg-black max-w-full mx-auto text-white sticky top-0 z-40"
+      id="/"
+    >
       <div className="max-w-[1320px] mx-auto    px-4 ">
         <div className="flex justify-between h-24 items-center">
           <div className="">
@@ -20,12 +25,46 @@ const Navbar = () => {
           </div>
           <div className="lg:flex hidden justify-between items-center  ">
             <nav>
-              <ul className="flex gap-10 px-1 font-bold text-[16px]">
-                <li className="bg-[#009963]  px-4 p-1 rounded-md">Home</li>
-                <li className="  px-4 p-1 rounded-md">Features</li>
-                <li className="  px-4 p-1 rounded-md">Doctors</li>
-                <li className="  px-4 p-1 rounded-md">Testimonials</li>
-                <li className="  px-4 p-1 rounded-md">contact</li>
+              <ul className=" flex  gap-6 px-1 font-bold text-[16px] cursor-pointer">
+                <Link to="/" spy={true} smooth={true} offset={0} duration={500}>
+                  <li className="  px-4 p-1 rounded-md ">Home</li>
+                </Link>
+                <Link
+                  to="features"
+                  spy={true}
+                  smooth={true}
+                  offset={30}
+                  duration={500}
+                >
+                  <li className="  px-4 p-1 rounded-md">Features</li>
+                </Link>
+                <Link
+                  to="doctors"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                >
+                  <li className="  px-4 p-1 rounded-md">Doctors</li>
+                </Link>{" "}
+                <Link
+                  to="testimonial"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                >
+                  <li className="  px-4 p-1 rounded-md">Testimonials</li>
+                </Link>
+                <Link
+                  to="footer"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                >
+                  <li className="  px-4 p-1 rounded-md">contact</li>
+                </Link>
               </ul>
             </nav>
             <div className="px-2 ml-10">
@@ -44,11 +83,51 @@ const Navbar = () => {
               <div className="flex flex-col py-6 justify-between items-center ">
                 <nav className="">
                   <ul className=" flex flex-col gap-6 px-1 font-bold text-[16px]">
-                    <li className=" bg-[#009963] px-4 p-1 rounded-md">Home</li>
-                    <li className="  px-4 p-1 rounded-md">Features</li>
-                    <li className="  px-4 p-1 rounded-md">Doctors</li>
-                    <li className="  px-4 p-1 rounded-md">Testimonials</li>
-                    <li className="  px-4 p-1 rounded-md">contact</li>
+                    <Link
+                      to="/"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={500}
+                    >
+                      <li className="  px-4 p-1 rounded-md">Home</li>
+                    </Link>
+                    <Link
+                      to="features"
+                      spy={true}
+                      smooth={true}
+                      offset={30}
+                      duration={500}
+                    >
+                      <li className="  px-4 p-1 rounded-md">Features</li>
+                    </Link>
+                    <Link
+                      to="doctors"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={500}
+                    >
+                      <li className="  px-4 p-1 rounded-md">Doctors</li>
+                    </Link>{" "}
+                    <Link
+                      to="testimonial"
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
+                    >
+                      <li className="  px-4 p-1 rounded-md">Testimonials</li>
+                    </Link>
+                    <Link
+                      to="footer"
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
+                    >
+                      <li className="  px-4 p-1 rounded-md">contact</li>
+                    </Link>
                   </ul>
                 </nav>
                 <div className="px-2 my-8 shadow-white shadow-2xl">

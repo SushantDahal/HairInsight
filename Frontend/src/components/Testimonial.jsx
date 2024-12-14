@@ -55,12 +55,12 @@ const Testimonial = () => {
   const responsiveOptions = [
     {
       breakpoint: "1400px",
-      numVisible: 2,
+      numVisible: 3,
       numScroll: 1,
     },
     {
-      breakpoint: "1199px",
-      numVisible: 3,
+      breakpoint: "1020px",
+      numVisible: 2,
       numScroll: 1,
     },
     {
@@ -69,7 +69,7 @@ const Testimonial = () => {
       numScroll: 1,
     },
     {
-      breakpoint: "575px",
+      breakpoint: "640px",
       numVisible: 1,
       numScroll: 1,
     },
@@ -77,7 +77,7 @@ const Testimonial = () => {
 
   const testimonialTemplate = (item) => {
     return (
-      <div className="bg-[#f2f5f3] p-2 py-4 mx-4 rounded-2xl">
+      <div className="bg-[#f2f5f3] p-2 py-4 mx-4 rounded-2xl min-h-[300px]">
         {item.icon}
         <h1 className="mt-6 ">{item.des}</h1>
         <div className="mt-6 py-4 flex items-center gap-4">
@@ -96,7 +96,7 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="w-full  py-10 ">
+    <div className="w-full  py-10 " id="testimonial">
       <Title title="Testimonial" />
       <div className="max-w-[1280px] mx-auto">
         <Carousel

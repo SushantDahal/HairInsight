@@ -1,5 +1,6 @@
 import HeroImg from "../assets/hairfall.png";
 import Button from "./Button";
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   return (
@@ -10,7 +11,15 @@ const Hero = () => {
             LET'S
           </h1>
           <h1 className="md:text-[65px] text-[40px]  text-center leading-tight font-extrabold md:w-[310px] w-[200px] relative right-10 px-6 bg-black  ml-5  -rotate-6 text-white">
-            REVIVE
+            <Typewriter
+              words={["Revive♻️", "grow⚡️", "Heal🤩"]}
+              loop={""}
+              cursor
+              cursorStyle="."
+              typeSpeed={70}
+              deleteSpeed={30}
+              delaySpeed={2000}
+            />
           </h1>
           <h1 className="md:text-[65px] text-[40px]   leading-tight font-extrabold">
             Your Hair's
