@@ -1,6 +1,6 @@
 const Login = () => {
   return (
-    <div>
+    <div className="bg-black">
       <div>
         <h1>Login</h1>
       </div>
