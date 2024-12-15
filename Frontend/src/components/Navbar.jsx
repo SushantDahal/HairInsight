@@ -3,6 +3,7 @@ import Logo from "../assets/Logo.png";
 import Button from "./Button";
 import { Divide as Hamburger } from "hamburger-react";
 import { Link } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState("false");
@@ -14,10 +15,7 @@ const Navbar = () => {
   const [activeItem, setActiveItem] = useState("Home"); // Default active item
 
   return (
-    <div
-      className="bg-black max-w-full mx-auto text-white sticky top-0 z-40"
-      id="/"
-    >
+    <div className="bg-black max-w-full mx-auto text-white sticky top-0 z-40">
       <div className="max-w-[1320px] mx-auto    px-4 ">
         <div className="flex justify-between h-24 items-center">
           <div className="">
@@ -26,7 +24,13 @@ const Navbar = () => {
           <div className="lg:flex hidden justify-between items-center  ">
             <nav>
               <ul className=" flex  gap-6 px-1 font-bold text-[16px] cursor-pointer">
-                <Link to="/" spy={true} smooth={true} offset={0} duration={500}>
+                <Link
+                  to="/"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                >
                   <li className="  px-4 p-1 rounded-md ">Home</li>
                 </Link>
                 <Link
@@ -67,9 +71,11 @@ const Navbar = () => {
                 </Link>
               </ul>
             </nav>
-            <div className="px-2 ml-10">
-              <Button button="Get Started" />
-            </div>
+            <RouterLink to="/Login">
+              <div className="px-2 ml-10">
+                <Button button="Get Started" />
+              </div>
+            </RouterLink>
           </div>
           <div className="grid lg:hidden " onClick={HandleNav}>
             <Hamburger />

@@ -8,24 +8,42 @@ import Experts from "./components/Experts";
 import Work from "./components/Work";
 import Testimonial from "./components/Testimonial";
 import Footer from "./components/Footer";
+import Login from "./components/Login";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      {/* <div className='bg-green-200'> */}
-      <div className="min-w-[300px]">
-        <Navbar />
-        <Hero />
-        <Review />
-        <Doctors />
-        <Features />
-        <Experts />
-        <Work />
-        <Testimonial />
-        <Footer />
+      <div className="">
+        <Router>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/Login" element={<LoginPage />} />
+          </Routes>
+        </Router>
       </div>
     </>
   );
+}
+
+function HomePage() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <Review />
+      <Doctors />
+      <Features />
+      <Experts />
+      <Work />
+      <Testimonial />
+      <Footer />
+    </>
+  );
+}
+
+function LoginPage() {
+  return <Login />;
 }
 
 export default App;

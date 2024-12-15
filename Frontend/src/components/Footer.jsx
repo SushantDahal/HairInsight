@@ -34,7 +34,7 @@ const Footer = () => {
           </ul>
         </div>{" "}
         <div className=" border-b-4 md:border-none border-white px-4">
-          <h1 className="text-xl font-bold mb-4 ">Explore</h1>
+          <h1 className="text-xl font-bold mb-4 ">Contact Us</h1>
           <ul>
             <li>977 9819067819</li>
             <li className="py-2">sushandahal246@gmail.com</li>

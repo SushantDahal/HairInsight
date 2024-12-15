@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   return (
-    <div className="max-w-full bg-grey md:pt-10 md:mt-10 my-4 py-4">
+    <div className="max-w-full bg-grey md:pt-10 md:mt-10 my-4 py-4" id="/">
       <div className="max-w-[1280px] mx-auto bg-white grid  md:grid-cols-2 md:gap-4">
         <div className="p-4 px-8 flex flex-col items-center md:items-start  justify-center ">
           <h1 className="md:text-[65px] text-[40px]   leading-tight font-extrabold">
@@ -18,7 +18,7 @@ const Hero = () => {
               cursorStyle="."
               typeSpeed={70}
               deleteSpeed={30}
-              delaySpeed={2000}
+              delaySpeed={1000}
             />
           </h1>
           <h1 className="md:text-[65px] text-[40px]   leading-tight font-extrabold">
