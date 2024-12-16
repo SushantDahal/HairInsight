@@ -9,6 +9,7 @@ import Work from "./components/Work";
 import Testimonial from "./components/Testimonial";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
+import Register from "./components/Register";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/Login" element={<LoginPage />} />
+            <Route path="/Register" element={<RegisterPage />} />
           </Routes>
         </Router>
       </div>
@@ -44,6 +46,9 @@ function HomePage() {
 
 function LoginPage() {
   return <Login />;
+}
+function RegisterPage() {
+  return <Register />;
 }
 
 export default App;

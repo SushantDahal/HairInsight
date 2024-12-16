@@ -1,10 +1,11 @@
 import { FaRegUser, FaLock } from "react-icons/fa";
-import Login_Img from "../assets/loginpageImg.png";
+import Login_Img from "../assets/Register.png";
 import InputField from "./Input_Field";
 import Logo from "../assets/Logo.png";
+import Button from "./Button";
 import { Link as RouterLink } from "react-router-dom";
 
-const Login = () => {
+const Register = () => {
   return (
     <div className=" text-white w-full ">
       <div className="w-full bg-black ">
@@ -15,10 +16,17 @@ const Login = () => {
         </div>
       </div>
       <div className="max-w-[1280px] mx-auto grid md:grid-cols-5 gap-6 p-10 h-screen">
-        <div className="bg-white text-black md:col-span-2 col-span-5 flex flex-col md:items-center justify-center px-6 md:text-start text-center">
+        <div className="md:col-span-3 col-span-5 flex justify-center items-center p-2 ">
+          <img src={Login_Img} alt="" className="    " />
+        </div>
+        <div className="bg-white text-black md:col-span-2 col-span-5 flex flex-col justify-center px-6 ">
           <div className="">
-            <h1 className="text-5xl font-bold py-2 ">WELCOME</h1>
-            <p className="text-xs">We are glad to see you back with us</p>
+            <h1 className="text-5xl font-bold py-2 ">Register</h1>
+            <div className="flex gap-4 my-4">
+              <Button button="User" />
+              <Button button="Doctor" />
+              <Button button="Admin" />
+            </div>
           </div>
           <InputField icon={FaRegUser} type="text" placeholder="Username" />
           <InputField icon={FaLock} type="password" placeholder="password" />
@@ -28,16 +36,11 @@ const Login = () => {
           <h2 className="my-4 text-red-500">Forgot Password?</h2>
           <h2>
             Don’t have an account ?{" "}
-            <RouterLink to="/Register">
-              <span className="font-bold underline">Sign Up</span>
-            </RouterLink>
+            <span className="font-bold underline">Sign Up</span>
           </h2>
-        </div>
-        <div className="md:col-span-3 col-span-5 flex justify-center items-center p-2 ">
-          <img src={Login_Img} alt="" className="    " />
         </div>
       </div>
     </div>
   );
 };
-export default Login;
+export default Register;
