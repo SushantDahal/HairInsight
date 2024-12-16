@@ -5,7 +5,7 @@ const InputField = (props) => {
         <div>{<props.icon className="text-black" size={20} />}</div>
         <input
           type={props.type}
-          className="w-full bg-transparent outline-none py-2  px-4 text-xl"
+          className="w-full bg-transparent outline-none py-2  px-4 text-[18px]"
           placeholder={props.placeholder}
         />
       </div>

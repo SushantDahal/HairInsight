@@ -136,9 +136,11 @@ const Navbar = () => {
                     </Link>
                   </ul>
                 </nav>
-                <div className="px-2 my-8 shadow-white shadow-2xl">
-                  <Button button="Get Started" />
-                </div>
+                <RouterLink to="/Login">
+                  <div className="px-2 my-8 shadow-white shadow-2xl">
+                    <Button button="Get Started" />
+                  </div>
+                </RouterLink>
               </div>{" "}
             </div>
           </div>

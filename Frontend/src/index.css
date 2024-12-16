@@ -57,3 +57,7 @@
 .p-carousel-indicator:hover {
   background-color: #28a745; /* Darker green on hover */
 }
+
+::placeholder {
+  font-size: 14px;
+}
