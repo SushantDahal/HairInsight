@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Review from "./components/Review";
@@ -12,6 +11,10 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+// User after Login
+import UserNav from "./UserAfterLogin/UserNav";
+import Assessment from "./UserAfterLogin/Assessment";
+import HairSpecialists from "./UserAfterLogin/HairSpecialists";
 function App() {
   return (
     <>
@@ -21,6 +24,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/Login" element={<LoginPage />} />
             <Route path="/Register" element={<RegisterPage />} />
+            <Route path="/afterLogin" element={<UserAfter_Login />} />
           </Routes>
         </Router>
       </div>
@@ -51,4 +55,14 @@ function RegisterPage() {
   return <Register />;
 }
 
+//>>>>>>>>>> User After Login  <<<<<<<<<<<<<<<<//
+function UserAfter_Login() {
+  return (
+    <>
+      <UserNav />
+      <Assessment />
+      <HairSpecialists />
+    </>
+  );
+}
 export default App;

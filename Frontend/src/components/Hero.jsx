@@ -1,6 +1,7 @@
 import HeroImg from "../assets/hairfall.png";
 import Button from "./Button";
 import { Typewriter } from "react-simple-typewriter";
+import { Link as RouterLink } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -31,7 +32,9 @@ const Hero = () => {
             Personalized consultations, expert advice, and early-stage hair fall
             detection - all in one place.
           </p>
-          <Button button="SCAN" />
+          <RouterLink to="/afterLogin">
+            <Button button="SCAN" />
+          </RouterLink>
         </div>
         <div className=" p-1 px-4">
           <img src={HeroImg} alt="" className="rounded-t-2xl " />
